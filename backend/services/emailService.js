@@ -29,12 +29,12 @@ export async function sendBookingConfirmationEmail(data) {
     },
   });
 
-  const pdfPath=path.resolve("assets/JB.CV.pdf");
+  const pdfPath=path.resolve("assets/Bliss of Pain _ Suspension Prep.pdf");
   const pdfBuffer=await fs.readFile(pdfPath);
 
   const pdfAttachment=[
     {
-      filename: "test.pdf",
+      filename: "Suspension_Guide.pdf",
       content: pdfBuffer,
       contentType: "application/pdf",
     },
@@ -46,7 +46,7 @@ export async function sendBookingConfirmationEmail(data) {
     to: data.email,
     subject: `Thanks for your booking, ${data.firstName}!`,
     html: htmlToUser,
-    // attachments: pdfAttachment,
+    attachments: pdfAttachment,
   });
 
   // ✅ Notify business owner
