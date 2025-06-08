@@ -13,6 +13,11 @@ import axios from 'axios';
 import {useForm} from "react-hook-form";
 import {z} from 'zod';
 import {StyledTextField} from './StyledTextField';
+import {toast} from 'react-toastify';
+
+type BookingFormProps = {
+  setOpen: (open: boolean) => void;
+};
 
 const questionSchema = z.object({
   questionId: z.string(),
@@ -50,7 +55,7 @@ const sampleQuestions = [
   {questionId: 'q14', questionText: 'Do you have any questions, requests, or anything else you’d like to share with the team?'},
 ];
 
-export default function BookingForm() {
+export default function BookingForm({setOpen}: BookingFormProps) {
   const {
     // control,
     register,
@@ -73,8 +78,13 @@ export default function BookingForm() {
   });
 
   const mutation = useMutation({
-    mutationFn: (newBookingForm: FormFields) =>
-      axios.post(`${ import.meta.env.VITE_API_URL }/booking`, newBookingForm),
+    mutationFn: (newBookingForm: FormFields) => {
+      return axios.post(`${ import.meta.env.VITE_API_URL }/booking`, newBookingForm)
+    },
+    onSuccess: (_res) => {
+      setOpen(false)
+      toast.success('Booking form has been submitted')
+    }
   });
 
   const onSubmit = handleSubmit((data: FormFields) => {

@@ -12,7 +12,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import {ReactNode, useState} from 'react';
 
 type MainDialogProps = {
-  children: ReactNode;
+  children: ((setOpen: (open: boolean) => void) => ReactNode) | ReactNode;
   showFooter?: boolean;
   title: string;
   actionBtn: string;
@@ -84,7 +84,7 @@ export default function MainDialog({
         </DialogTitle>
 
         <DialogContent sx={{p: '3rem 1.5rem !important'}}>
-          {children}
+          {typeof children === 'function' ? children(setOpen) : children}
         </DialogContent>
 
         {showFooter && (

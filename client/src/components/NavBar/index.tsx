@@ -52,7 +52,7 @@ const content = (
           <img src={logo} alt="Logo" style={{height: 70}} />
         </Link>
       </Box>
-      <Box sx={{display: "flex", gap: 2}}>
+      {/* <Box sx={{display: "flex", gap: 2}}>
         <Button component={Link} to="/" color="inherit">
           Home
         </Button>
@@ -62,7 +62,7 @@ const content = (
         <Button component={Link} to="/contact" color="inherit">
           Contact
         </Button>
-      </Box>
+      </Box> */}
     </Toolbar>
   </Container>
 );

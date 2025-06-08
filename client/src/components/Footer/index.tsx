@@ -23,7 +23,7 @@ export default function Footer() {
       >
         <Typography variant="body2">© {new Date().getFullYear()} Bliss of Pain</Typography>
 
-        <Box sx={{display: "flex", gap: 2}}>
+        {/* <Box sx={{display: "flex", gap: 2}}>
           <Button component={Link} to="/privacy" sx={linkStyle}>
             Privacy
           </Button>
@@ -33,7 +33,7 @@ export default function Footer() {
           <Button component={Link} to="/contact" sx={linkStyle}>
             Contact
           </Button>
-        </Box>
+        </Box> */}
       </Container>
     </Box>
   );

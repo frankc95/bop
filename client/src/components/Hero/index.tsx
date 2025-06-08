@@ -47,7 +47,9 @@ export default function Hero() {
           title='Body Suspension – Registration Form'
           actionBtn="Register"
         >
-          <BookingForm />
+          {(setOpen) => (
+            <BookingForm setOpen={setOpen} />
+          )}
         </MainDialog>
       </Box>
     </Box >

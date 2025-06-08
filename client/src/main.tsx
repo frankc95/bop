@@ -13,6 +13,7 @@ import NavBar from './components/NavBar/index.tsx'
 import {createTheme, ThemeProvider} from '@mui/material/styles'
 import {CssBaseline} from '@mui/material'
 import Footer from './components/Footer/index.tsx'
+import {ToastContainer} from 'react-toastify';
 
 const queryClient = new QueryClient();
 
@@ -65,6 +66,7 @@ createRoot(document.getElementById('root')!).render(
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <RouterProvider router={router} />
+        <ToastContainer position='bottom-right' />
       </ThemeProvider>
     </QueryClientProvider>
   </StrictMode>
