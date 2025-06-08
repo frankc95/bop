@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #fafafa;
+        padding: 20px;
+      }
+      .container {
+        background: white;
+        padding: 30px;
+        border-radius: 6px;
+        box-shadow: 0 0 10px #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+      <h2 style="margin-bottom: 20px;">Rejestracja na ModernTribe RETREAT
+        VOL.1</h2>
+      <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+        <thead>
+          <tr>
+            <th
+              style="text-align: left; padding: 8px; background: #333; color: #fff;">Question</th>
+            <th
+              style="text-align: left; padding: 8px; background: #333; color: #fff;">Answer</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each questions}}
+          <tr style="background-color: {{#if @odd}}#f9f9f9{{else}}#fff{{/if}};">
+            <td
+              style="padding: 8px; border: 1px solid #ddd;">{{questionText}}</td>
+            <td style="padding: 8px; border: 1px solid #ddd;">{{answer}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
