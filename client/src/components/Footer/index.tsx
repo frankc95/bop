@@ -1,5 +1,5 @@
-import {Box, Button, Container, Typography} from "@mui/material";
-import {Link} from "react-router-dom";
+import {Box, Container, Typography} from "@mui/material";
+// import {Link} from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -39,8 +39,8 @@ export default function Footer() {
   );
 }
 
-const linkStyle: React.CSSProperties = {
-  color: "white",
-  textDecoration: "none",
-  fontSize: "0.875rem",
-};
+// const linkStyle: React.CSSProperties = {
+//   color: "white",
+//   textDecoration: "none",
+//   fontSize: "0.875rem",
+// };

@@ -9,7 +9,7 @@ interface LayoutProps {
   children?: ReactNode;
 }
 
-export default function Layout({header, sidebar, footer}: LayoutProps) {
+export default function Layout({header, footer}: LayoutProps) {
   const [isSticky, setSticky] = useState(false);
 
   useEffect(() => {

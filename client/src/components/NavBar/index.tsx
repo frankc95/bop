@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import {AppBar, Toolbar, Box, Button, Container} from "@mui/material";
+import {AppBar, Toolbar, Box, Container} from "@mui/material";
 import logo from "@/assets/bop.png";
 
 interface NavBarProps {
